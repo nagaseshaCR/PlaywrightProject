@@ -2,7 +2,7 @@ const {test, expect} = require('@playwright/test')
 const {PageObjectManager}=require('../pageObjects/PageObjectManager');
 const { OrderSummeryPage } = require('../pageObjects/OrderSummeryPage');
 
-test('Client app place practice', async ({page})=>{
+test(`@web Client app place practice`, async ({page})=>{
 
      const username = 'seshu99@gmail.com';
     const password ='Seshu24@';

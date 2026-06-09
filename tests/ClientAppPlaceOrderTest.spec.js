@@ -5,7 +5,7 @@ const { OrderSummeryPage } = require('../pageObjects/OrderSummeryPage');
 const placeOrderData = JSON.parse(JSON.stringify(require('../TestData/placeOrderTestData.json')))
 // test.describe.configure({mode:'serial'})
 for (const data of placeOrderData) {
-    test(`@web Client App Place Order ${data.productName}`, async ({ page }) => {
+    test(`Client App Place Order ${data.productName}`, async ({ page }) => {
 
         const pageObjectManager = new PageObjectManager(page);
         const loginPage = pageObjectManager.getLoginPage();
