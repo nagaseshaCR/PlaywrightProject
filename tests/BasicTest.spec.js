@@ -45,6 +45,7 @@ test('UI Controls', async ({page})=>{
     await dropdown.selectOption('consult');
     await page.locator('span.radiotextsty').last().click();
     await page.locator('button#okayBtn').click()
+    await page.locator('#myModal').waitFor({ state: 'hidden' });
     console.log('User radio button status: '+await page.locator('span.radiotextsty').last().isChecked())
     await expect(page.locator('span.radiotextsty').last()).toBeChecked();
     await terms.click();

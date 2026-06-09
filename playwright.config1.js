@@ -6,8 +6,8 @@ import { defineConfig, devices } from '@playwright/test';
  */
 const config = defineConfig({
   testDir: './tests',
-  retries:2,
-  workers: 3,
+  retries:1,
+  workers: 5,
   timeout: 60000,
   expect: {
     timeout: 50 * 1000,
@@ -19,8 +19,8 @@ const config = defineConfig({
         browserName: 'webkit',
         headless: false,
         screenshot: 'on',
-        trace: 'on',//retain-on-failure
-        ...devices['iPhone 15']
+        trace: 'on'//retain-on-failure
+        //...devices['iPhone 15']
       }
 
     },
