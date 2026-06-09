@@ -25,7 +25,7 @@ const config = defineConfig({
 
     },
     {
-      name: 'chrome',
+      name: 'chromium',
       use: {
         browserName: 'chromium',
         headless: false,
