@@ -21,6 +21,24 @@ const config = defineConfig({
         screenshot: 'on',
         trace: 'on'//retain-on-failure
       }
+    },
+    {
+      name: 'webkit',
+      use: {
+        browserName: 'webkit',
+        headless: false,
+        screenshot: 'on',
+        trace: 'on'//retain-on-failure
+      }
+    },
+    {
+      name: 'firefox',
+      use: {
+        browserName: 'firefox',
+        headless: false,
+        screenshot: 'on',
+        trace: 'on'//retain-on-failure
+      }
     }
   ],
 

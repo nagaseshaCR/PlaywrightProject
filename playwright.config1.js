@@ -37,6 +37,15 @@ const config = defineConfig({
         // viewport: { width: 720, height: 720 }
 
       }
+    },
+    {
+      name: 'firefox',
+      use: {
+        browserName: 'firefox',
+        headless: false,
+        screenshot: 'on',
+        trace: 'on'//retain-on-failure
+      }
     }
   ],
   reporter: 'html',
