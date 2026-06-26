@@ -12,7 +12,10 @@
     "RegressionTestWeb": "npx playwright test --grep '@Web' --headed",
     "RegressionTestApi": "npx playwright test --grep '@API' --headed",
     "SafariTest": "npx playwright test --config playwright.config1.js --project=safari",
-    "SafariTestWeb": "npx playwright test --grep @web --config playwright.config1.js --project=safari"
+    "SafariTestWeb": "npx playwright test --grep @web --config playwright.config1.js --project=safari",
+    "test:dev": "cross-env TEST_ENV=dev playwright test tests/TestEnvClientApp.spec.js --project=chromium --headed",
+    "test:qa": "cross-env TEST_ENV=qa playwright test tests/TestEnvClientApp.spec.js --project=chromium --headed",
+    "test:uat": "cross-env TEST_ENV=uat playwright test tests/TestEnvClientApp.spec.js --project=chromium --headed"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +24,9 @@
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.2.1",
-    "allure-playwright": "^3.9.0"
+    "allure-playwright": "^3.9.0",
+    "cross-env": "^10.1.0",
+    "dotenv-cli": "^11.0.0"
   },
   "dependencies": {
     "exceljs": "^3.4.0",

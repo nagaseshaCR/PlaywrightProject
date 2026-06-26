@@ -1,6 +1,15 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+// require('dotenv').config({
+//   path: `.env.${process.env.TEST_ENV || 'dev'}`
+// });
 
+
+module.exports = defineConfig({
+  use: {
+    baseURL: process.env.BASE_URL
+  }
+});
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
@@ -49,6 +58,7 @@ const config = defineConfig({
     }
   ],
   reporter: 'html',
+  
 
 
 });
